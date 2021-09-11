@@ -1,6 +1,6 @@
 import React from "react";
 
-function PlayerDetail(props) {
+function UserDetail(props) {
   return (
     <div className="text-center">
       <img alt={props.title} className="img-fluid" src={props.src} style={{ margin: "0 auto" }} />
@@ -11,4 +11,4 @@ function PlayerDetail(props) {
   );
 }
 
-export default PlayerDetail;
+export default UserDetail;

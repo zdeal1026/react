@@ -7,7 +7,7 @@ import SearchForm from "./SearchForm";
 import PlayerDetail from "./PlayerDetail";
 import API from "../utils/API";
 
-class FootballContainer extends Component {
+class UserContainer extends Component {
   state = {
     result: {},
     search: ""
@@ -48,11 +48,11 @@ class FootballContainer extends Component {
             >
               {this.state.result.Title ? (
                 <PlayerDetail
-                  title={this.state.result.Title}
-                  src={this.state.result.Poster}
-                  director={this.state.result.Director}
-                  genre={this.state.result.Genre}
-                  released={this.state.result.Released}
+                  //title={this.state.result.Title}
+                  //src={this.state.result.Poster}
+                  //director={this.state.result.Director}
+                  //genre={this.state.result.Genre}
+                  //released={this.state.result.Released}
                 />
               ) : (
                 <h3>No Results to Display</h3>
@@ -74,4 +74,4 @@ class FootballContainer extends Component {
   }
 }
 
-export default FootballContainer;
+export default UserContainer;

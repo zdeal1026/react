@@ -1,8 +1,10 @@
 import React from "react";
-import Container from "./components/FootballContainer.js";
+import apiCalls from "./utils/API.js"
 
 function App() {
-    return <Container />;
+    console.log(apiCalls.randomUserGet())
+   // return <Container />;
+   return <Container />
 };
 
 export default App;
