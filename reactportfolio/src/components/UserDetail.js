@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css"
 
-const EmployeeTable = (props) => {
+const UserDetail = (props) => {
   return (
     <table className="table table-striped table-sortable text-center">
       <thead>
@@ -51,4 +51,4 @@ const EmployeeTable = (props) => {
   );
 };
 
-export default EmployeeTable;
+export default UserDetail;
