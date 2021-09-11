@@ -1,10 +1,10 @@
 import React from "react";
-import apiCalls from "./utils/API.js"
+//import apiCalls from "./utils/API.js"
+import UserContainer from "./components/UserContainer"
 
 function App() {
-    console.log(apiCalls.randomUserGet())
    // return <Container />;
-   return <Container />
+   return <UserContainer />
 };
 
 export default App;

@@ -4,7 +4,7 @@ import Row from "./Row";
 import Col from "./Col";
 import Card from "./Card";
 import SearchForm from "./SearchForm";
-import PlayerDetail from "./PlayerDetail";
+import UserDetail from "./UserDetail";
 import API from "../utils/API";
 
 class UserContainer extends Component {
@@ -15,10 +15,10 @@ class UserContainer extends Component {
 
   // When this component mounts, search for the movie "The Matrix"
   componentDidMount() {
-    this.searchPlayer("Christiano Ronaldo");
+    this.searchUser("");
   }
 
-  searchPlayer = query => {
+  searchUser = query => {
     API.search(query)
       .then(res => this.setState({ result: res.data }))
       .catch(err => console.log(err));
@@ -35,7 +35,7 @@ class UserContainer extends Component {
   // When the form is submitted, search the OMDB API for the value of `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchPlayer(this.state.search);
+    this.searchUser(this.state.search);
   };
 
   render() {
@@ -47,7 +47,7 @@ class UserContainer extends Component {
               heading={this.state.result.Title || "Search for a Player to Begin"}
             >
               {this.state.result.Title ? (
-                <PlayerDetail
+                <UserDetail
                   //title={this.state.result.Title}
                   //src={this.state.result.Poster}
                   //director={this.state.result.Director}
