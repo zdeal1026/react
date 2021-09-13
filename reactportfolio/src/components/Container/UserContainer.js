@@ -31,5 +31,17 @@ class UserContainer extends Component {
   }
   
   //updating serach value to state by employee name
+  handleInputChange = (e) => {
+    const value = e.target.value;
+    this.setState({ search: value });
+    this.filterEmployees(value.toLowerCase().trim());
+  };
+
+  //searching API 
+  handleFormSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  
   )
 }
