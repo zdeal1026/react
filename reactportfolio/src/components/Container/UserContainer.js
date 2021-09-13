@@ -114,7 +114,7 @@ class UserContainer extends Component {
         handleFormSubmit = {this.handleFormSubmit}
         />
         <div className = 'container'>
-          <EmployeeTable
+          <Directory
           state={this.state}
           sortBy={this.sortBy}
           filteredEmployees={this.filterEmployees}
