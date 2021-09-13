@@ -95,5 +95,35 @@ class UserContainer extends Component {
       }
     };
 
-    
+    formatDate = (date) => {
+      date = new Date(date);
+      let dob = [];
+      dob.push(('0' + (date.getMonth() + 1)).slice(-2));
+      dob.push(('0' + date.getDate()).slice(-2));
+      dob.push(date.getFullYear());
+
+      return dob.join("-");
+    }
+
+    render() {
+      return (
+        <>
+        <SearchForm
+        value={this.state.search}
+        handleInputChange = {this.handleInputChange}
+        handleFormSubmit = {this.handleFormSubmit}
+        />
+        <div className = 'container'>
+          <EmployeeTable
+          state={this.state}
+          sortBy={this.sortBy}
+          filteredEmployees={this.filterEmployees}
+          formatDate={this.formatDate}
+          />
+        </div>
+        </>
+      );
+    }
   }
+
+  export default UserContainer
