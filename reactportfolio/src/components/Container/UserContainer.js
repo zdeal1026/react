@@ -1,3 +1,5 @@
+import React, { Component} from "react";
+import Directory from "../Directory/UserDetail";
 import SearchForm from "./Searchform/SearchForm.js";
 import API from "../../utils/API";
 
@@ -79,7 +81,7 @@ class UserContainer extends Component {
       this.setState({
         filteredEmployees: this.state.employees.filter((employee) => {
           return (
-            employeeemployee.name.first
+            employee.name.first
             .toLowerCase()
             .concat("", employee.name.last.toLowerCase())
             .includes(data) ||
