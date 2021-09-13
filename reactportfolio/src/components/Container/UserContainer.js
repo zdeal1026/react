@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import Directory from "../Directory/UserDetail";
+import UserDetail from "../Directory/UserDetail";
 import SearchForm from "./Searchform/SearchForm.js";
 import API from "../../utils/API";
 
@@ -116,7 +116,7 @@ class UserContainer extends Component {
         handleFormSubmit = {this.handleFormSubmit}
         />
         <div className = 'container'>
-          <Directory
+          <UserDetail
           state={this.state}
           sortBy={this.sortBy}
           filteredEmployees={this.filterEmployees}
