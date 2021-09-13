@@ -67,11 +67,33 @@ class UserContainer extends Component {
           }
       });
 
-      
-
+      this.setState({filteredEmployees: sortedStaff,
+        sortDir:{...this.initialSortDir, [key]: "asc",
+      },
+    });
     }
-  }
+  };
 
-  
-  )
-}
+  filterEmployees =(data) => {
+    if (data) {
+      this.setState({
+        filteredEmployees: this.state.employees.filter((employee) => {
+          return (
+            employeeemployee.name.first
+            .toLowerCase()
+            .concat("", employee.name.last.toLowerCase())
+            .includes(data) ||
+            employee.phone.includes(data) ||
+            employee.phone.replace(/[^\w\s]/gi, "").include(data) ||
+            employee.email.includes(data) ||
+            this.formatDate(employee.dob.date).includes(data)
+            );
+        }),
+      });
+      } else {
+        this.setState({fildteredEmployees: this.state.employees});
+      }
+    };
+
+    
+  }
