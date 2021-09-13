@@ -20,4 +20,16 @@ class UserContainer extends Component {
   };
 
   //calling api when component mounts
+  componentDidMount() {
+    API.searchEmployees()
+      .then((res) => this.setState({
+        employees: res.data.results,
+        fileteredEmployees: res.data.results
+      })
+      )
+      .catch((err) => console.log(err));
+  }
+  
+  //updating serach value to state by employee name
+  )
 }
